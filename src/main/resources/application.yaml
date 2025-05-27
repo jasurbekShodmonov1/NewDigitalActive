@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Digital Asset New Features
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_SERVER:localhost:5432/digitalNew}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:jasur1803}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+
+springdoc:
+  swagger-ui:
+    path:/swagger-ui.html
+
+server:
+  port: 8081
+
+api:
+  users-url: http://localhost:8080/api/users/v1
+  roles-url: http://localhost:8080/api/roles/v1
+
