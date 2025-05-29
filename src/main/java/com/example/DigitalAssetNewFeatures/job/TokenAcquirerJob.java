@@ -11,8 +11,8 @@ public class TokenAcquirerJob {
     private final AuthClientService authClientService;
 
 
-    @Scheduled(cron = "")
-    public void refreshAccessToken(){
+    @Scheduled(cron = "0 0 */22 * * ?")
+    public void refreshAccessToken() {
         authClientService.getAccessToken();
     }
 }

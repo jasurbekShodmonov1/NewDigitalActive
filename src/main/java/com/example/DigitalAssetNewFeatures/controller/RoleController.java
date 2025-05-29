@@ -27,7 +27,7 @@ public class RoleController {
 
     private final RolesClientService rolesClientService ;
 
-    @Operation(summary = "Create a new user", description = "Sends a POST request to create a user via an external API")
+
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User created successfully",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = Role.class))),
