@@ -1,5 +1,6 @@
 package com.example.DigitalAssetNewFeatures.controller;
 
+import com.example.DigitalAssetNewFeatures.dto.ClientRolesResponseDto;
 import com.example.DigitalAssetNewFeatures.model.Role;
 
 
@@ -36,16 +37,17 @@ public class RoleController {
     })
 
     @GetMapping()
-    public ResponseEntity<List<Role>>getAllUser(){
-        Role[] roles = rolesClientService.getAllRole();
-        return ResponseEntity.ok(Arrays.asList(roles));
+    public ResponseEntity<List<ClientRolesResponseDto>>getAllUser(){
+//        Role[] roles = rolesClientService.getAllRoles();
+//        return ResponseEntity.ok(Arrays.asList(roles));
+          return rolesClientService.getAllRoles();
 
 
     }
-    @PostMapping("/create")
-    public ResponseEntity<Role> createUser(@Valid @RequestBody Role roles) {
-
-        Role createdUser = rolesClientService.createRole(roles);
-        return ResponseEntity.ok(createdUser);
-    }
+//    @PostMapping("/create")
+//    public ResponseEntity<Role> createUser(@Valid @RequestBody Role roles) {
+//
+//        Role createdUser = rolesClientService.createRole(roles);
+//        return ResponseEntity.ok(createdUser);
+//    }
 }

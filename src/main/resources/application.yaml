@@ -22,8 +22,8 @@ server:
   port: 8081
 
 api:
-  users-url: http://localhost:8080/api/users/v1
-  roles-url: http://localhost:8080/api/roles/v1
+  url: http://localhost:8080
+  digital-active: http://localhost:8080
 
 auth:
   username: jasur
