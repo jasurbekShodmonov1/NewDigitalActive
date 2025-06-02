@@ -60,10 +60,9 @@ public class RolesClientService {
 
             List<ClientRolesResponseDto> roles = roleClient.getAllRoles();
             System.out.println(roles);
-//            Role[] roles = response.getRoles();
-//            System.out.println(response);
+
             return ResponseEntity.ok(roles);
-//            return ResponseEntity.ok(Objects.isNull(roles) ? new Role[0] : roles);
+
         }catch (Exception e){
             throw new RuntimeException( e.getMessage(), e);
         }

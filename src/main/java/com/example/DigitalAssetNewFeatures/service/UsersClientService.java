@@ -68,7 +68,7 @@ public class UsersClientService {
                     .uri("/v1")
                     .header("Authorization", "Bearer "+ token)
                     .retrieve()
-                    .body(new ParameterizedTypeReference<PageResponse<UserResponseDto>>() {});;
+                    .body(new ParameterizedTypeReference<PageResponse<UserResponseDto>>() {});
 
             List<UserResponseDto> userList = users.getContent();
             System.out.println(userList);
